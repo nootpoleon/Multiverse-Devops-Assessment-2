@@ -1,7 +1,4 @@
 import csv
-import pandas as pd
-import numpy as np
-from numpy import genfromtxt
 
 def get_csv(file):
   global data
@@ -17,3 +14,4 @@ def drop_duplicates(file):
     if x not in no_duplicates:
       no_duplicates.append(x)
   return no_duplicates
+  

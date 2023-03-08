@@ -1,7 +1,9 @@
-from input import *
+from input import get_csv
+from input import drop_duplicates
+
+import pytest
 
 data = get_csv('results.csv')
-print(data)
-
 data = drop_duplicates('results.csv')
-print(data)
+
+pytest.main()

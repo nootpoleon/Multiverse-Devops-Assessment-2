@@ -1,9 +1,8 @@
 from input import get_csv
 from input import drop_duplicates
-
+from test_main import test_duplicatesremoved
+import csv
 import pytest
-
-data = get_csv('results.csv')
-data = drop_duplicates('results.csv')
+import pandas as pd
 
 pytest.main()

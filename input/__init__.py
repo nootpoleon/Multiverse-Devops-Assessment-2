@@ -1,12 +1,13 @@
 import csv
 
 def get_csv(file):
-  global data
   file = open('results.csv')
   type(file)
   csvreader = csv.reader(file)
   data = list(csvreader)
   return data
+
+data = get_csv('results.csv')
 
 def drop_duplicates(file):
   no_duplicates = []

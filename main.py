@@ -7,8 +7,3 @@ import csv
 import pytest
 import pandas as pd
 
-
-
-
-print(nonanarr)
-print(nonan)

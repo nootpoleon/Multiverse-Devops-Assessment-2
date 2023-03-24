@@ -1,5 +1,6 @@
 import pytest
 import csv
+import pandas as pd
 from input import ans3valid
 from pathlib import Path
 
@@ -11,3 +12,7 @@ with open('cleansedresults.csv','w', newline='')as f:
 
 path = Path('cleansedresults.csv')
 print(path.is_file())
+
+cleansedfile = open('cleansedresults.csv')
+readcleansedfile = pd.read_csv(cleansedfile)
+print(readcleansedfile)

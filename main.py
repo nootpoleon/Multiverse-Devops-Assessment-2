@@ -1,18 +1,11 @@
 import pytest
-import csv
-import pandas as pd
-from input import ans3valid
-from pathlib import Path
+from input import *
 
 file = open('results.csv')
-
-with open('cleansedresults.csv','w', newline='')as f:
-  writer =csv.writer(f)
-  writer.writerows(ans3valid(file))
-
-path = Path('cleansedresults.csv')
-print(path.is_file())
-
-cleansedfile = open('cleansedresults.csv')
-readcleansedfile = pd.read_csv(cleansedfile)
-print(readcleansedfile)
+data = get_csv(file)
+data = drop_duplicate(data)
+data = drop_null(data)
+data = capitalise_username(data)
+data = ans3valid(data)
+data = exportcsv(data)
+data = finalresult(data)

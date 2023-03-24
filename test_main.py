@@ -1,11 +1,13 @@
 import pandas as pd
 import numpy as np
+from pathlib import Path
 
 from input import get_csv
 from input import drop_duplicate
 from input import drop_null
 from input import capitalise_username
 from input import ans3valid
+from input import exportcsv
 
 file = open('results.csv')
 
@@ -104,3 +106,13 @@ def test_validans3():
   #Assert
   assert passresult == output
 
+def test_exportcsv():
+  #Arrange
+  output = True
+  
+  #Act
+  path = Path('cleansedresults.csv')
+  passresult = path.is_file()
+  
+  #Assert
+  assert passresult == output
